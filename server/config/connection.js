@@ -1,7 +1,7 @@
   
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://admin:8279000Ak@cluster0.psc0s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' , {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/reduxstore', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
